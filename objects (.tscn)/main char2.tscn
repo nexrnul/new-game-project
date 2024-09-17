@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://6o0mvvwopuwk"]
+
+[ext_resource type="Texture2D" uid="uid://chx6dqsjs7rtf" path="res://assets/Free-Street-Animal-Pixel-Art-Asset-Pack5-removebg-preview - Copy.png" id="1_0uwqm"]
+[ext_resource type="Script" path="res://objects (.tscn)/main_char_2.gd" id="1_mxqpl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_clgyo"]
+size = Vector2(44, 35)
+
+[node name="main char" type="CharacterBody2D"]
+script = ExtResource("1_mxqpl")
+
+[node name="Free-street-animal-pixel-art-asset-pack5-removebg-preview-Copy" type="Sprite2D" parent="."]
+position = Vector2(-3, -5)
+texture = ExtResource("1_0uwqm")
+hframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-7, -8.5)
+shape = SubResource("RectangleShape2D_clgyo")
