@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bmleyyaa8m6gq"]
+[gd_scene load_steps=8 format=3 uid="uid://bmleyyaa8m6gq"]
 
+[ext_resource type="Script" path="res://objects (.tscn)/global.gd" id="1_4gtff"]
 [ext_resource type="Texture2D" uid="uid://b675atxk7o1bo" path="res://assets/Green-Zone-Tileset-Pixel-Art2-removebg-preview.png" id="1_s6qm5"]
 [ext_resource type="PackedScene" uid="uid://6o0mvvwopuwk" path="res://objects (.tscn)/main char2.tscn" id="2_e7jro"]
+[ext_resource type="Script" path="res://objects (.tscn)/label.gd" id="4_ab0di"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fblio"]
 texture = ExtResource("1_s6qm5")
@@ -926,8 +928,11 @@ use_texture_padding = false
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_fblio")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ly128"]
+
 [node name="Main Scene" type="Node2D"]
 position = Vector2(248, 543)
+script = ExtResource("1_4gtff")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_pvvcp")
@@ -935,4 +940,31 @@ format = 2
 layer_0/tile_data = PackedInt32Array(-131075, 983040, 3, -65539, 983040, 4, -3, 983040, 5, -131074, 1048576, 3, -65538, 1048576, 4, -2, 1048576, 5, -131073, 1114112, 3, -65537, 1114112, 4, -1, 1114112, 5, -327689, 983040, 3, -262153, 983040, 4, -196617, 983040, 5, -327688, 1048576, 3, -262152, 1048576, 4, -196616, 1048576, 5, -327687, 1114112, 3, -262151, 1114112, 4, -196615, 1114112, 5, -393213, 983040, 3, -327677, 983040, 4, -262141, 983040, 5, -393212, 1048576, 3, -327676, 1048576, 4, -262140, 1048576, 5, -393211, 1114112, 3, -327675, 1114112, 4, -262139, 1114112, 5, 327664, 983040, 3, 393200, 983040, 4, 458736, 983040, 5, 327665, 1048576, 3, 393201, 1048576, 4, 458737, 1048576, 5, 327666, 1114112, 3, 393202, 1114112, 4, 458738, 1114112, 5, 327667, 983040, 3, 393203, 983040, 4, 458739, 983040, 5, 327668, 1048576, 3, 393204, 1048576, 4, 458740, 1048576, 5, 327669, 1114112, 3, 393205, 1114112, 4, 458741, 1114112, 5, 327670, 983040, 3, 393206, 983040, 4, 458742, 983040, 5, 327671, 1048576, 3, 393207, 1048576, 4, 458743, 1048576, 5, 327672, 1114112, 3, 393208, 1114112, 4, 458744, 1114112, 5, 327673, 983040, 3, 393209, 983040, 4, 458745, 983040, 5, 327674, 1048576, 3, 393210, 1048576, 4, 458746, 1048576, 5, 327675, 1114112, 3, 393211, 1114112, 4, 458747, 1114112, 5, 327676, 983040, 3, 393212, 983040, 4, 458748, 983040, 5, 327677, 1048576, 3, 393213, 1048576, 4, 458749, 1048576, 5, 327678, 1114112, 3, 393214, 1114112, 4, 458750, 1114112, 5, 327679, 983040, 3, 393215, 983040, 4, 458751, 983040, 5, 262144, 1048576, 3, 327680, 1048576, 4, 393216, 1048576, 5, 262145, 1114112, 3, 327681, 1114112, 4, 393217, 1114112, 5, 262146, 983040, 3, 327682, 983040, 4, 393218, 983040, 5, 262147, 1048576, 3, 327683, 1048576, 4, 393219, 1048576, 5, 262148, 1114112, 3, 327684, 1114112, 4, 393220, 1114112, 5, 262149, 983040, 3, 327685, 983040, 4, 393221, 983040, 5, 262150, 1048576, 3, 327686, 1048576, 4, 393222, 1048576, 5, 262151, 1114112, 3, 327687, 1114112, 4, 393223, 1114112, 5, 262152, 983040, 3, 327688, 983040, 4, 393224, 983040, 5, 262153, 1048576, 3, 327689, 1048576, 4, 393225, 1048576, 5, 262154, 1114112, 3, 327690, 1114112, 4, 393226, 1114112, 5, 262155, 983040, 3, 327691, 983040, 4, 393227, 983040, 5, 262156, 1048576, 3, 327692, 1048576, 4, 393228, 1048576, 5, 262157, 1114112, 3, 327693, 1114112, 4, 393229, 1114112, 5, 262158, 983040, 3, 327694, 983040, 4, 393230, 983040, 5, 262159, 1048576, 3, 327695, 1048576, 4, 393231, 1048576, 5, 262160, 1114112, 3, 327696, 1114112, 4, 393232, 1114112, 5)
 
 [node name="main char" parent="." instance=ExtResource("2_e7jro")]
-position = Vector2(-113, -104)
+position = Vector2(-113, -121)
+
+[node name="Camera2D" type="Camera2D" parent="main char"]
+position = Vector2(141, -66)
+limit_left = 0
+limit_top = 0
+
+[node name="Control" type="Control" parent="main char"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -114.0
+offset_top = -367.0
+offset_right = -74.0
+offset_bottom = -327.0
+
+[node name="Label" type="Label" parent="main char/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("4_ab0di")
+
+[node name="change Scene" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="change Scene"]
+position = Vector2(247, 45)
+shape = SubResource("CircleShape2D_ly128")
+
+[connection signal="body_entered" from="change Scene" to="." method="_on_change_scene_body_entered"]

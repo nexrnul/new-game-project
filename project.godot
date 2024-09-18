@@ -15,6 +15,10 @@ run/main_scene="res://objects (.tscn)/main_scene.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://assets/icon.svg"
 
+[autoload]
+
+global="*res://objects (.tscn)/global.gd"
+
 [input]
 
 ui_accept={

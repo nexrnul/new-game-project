@@ -1,8 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://dxujsbg5uj2c3"]
+[gd_scene load_steps=4 format=3 uid="uid://dxujsbg5uj2c3"]
+
+[ext_resource type="Script" path="res://objects (.tscn)/star.gd" id="1_nv6n6"]
+[ext_resource type="Texture2D" uid="uid://cuuivydmp78c7" path="res://assets/images-removebg-preview.png" id="2_2fmsw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2u3vr"]
 
 [node name="Area2D" type="Area2D"]
+script = ExtResource("1_nv6n6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_2u3vr")
+
+[node name="Images-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(-1.90735e-06, 0)
+scale = Vector2(0.0888889, 0.0888889)
+texture = ExtResource("2_2fmsw")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
